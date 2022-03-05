@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>type</h1>
+	<pre>
+	
+	*** javascript의 타입은 primitive type과 reference type으로 나뉘어져 있다. 
+	
+	* primitive type : 값을 가지는 타입(깊은복사)
+				String(문자열),Number(숫자),Boolean,NULL,Undefined
+	* reference type : 주소를 가지는 타입(얕은복사)
+				Object(배열, 데이트, ...)
+	</pre>
+	<script type="text/javascript">
+	
+	let name ='배석진'; //String 타입추론으로 인해 자동으로 지정
+	let age=15;//Number
+	let isLeave=false;//Boolean
+	let nullVal=null;//NULL			=> 없다. 개발자가 명시적으로 해당 변수의 값이 없음을 나타내기 위해 할당하는 값
+	let undefinedVal;//Undefined	=> 정의되지 않은, 변수를 선언하고 초기화하지 않았을 때 자바스크립트 앤진이 할당하는 값
+	
+	console.log(name + ':' + typeof(name));
+	console.log(age + ':' + typeof(age));
+	console.log(isLeave + ':' + typeof(isLeave));
+	console.log(nullVal + ':' + typeof(nullVal));
+	console.log(undefinedVal + ':' + typeof(undefinedVal));
+	
+	let me = {
+			name : '배석진', //속성
+			age : 13, //속성
+			isLeave : false, //속성
+			toString : function(){
+				return '이름 : ' + this.name + '/ 나이 : ' + this.age;
+			} //메서드(객체에 속한 함수)
+	} //object type
+	
+	/* me의 toString 호출 */
+	console.log(me + '>>' + typeof(me));
+	
+	</script>
+</body>
+</html>
