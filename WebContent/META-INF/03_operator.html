@@ -4,7 +4,109 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
+<body> 
 
+	<h1>연산자</h1>
+	
+	<pre>
+	산술 : +,-,*,/,%
+	단항 : ++,--
+	비교 : &lt;,&gt;,&lt;=,&gt;=,==,===, !=,!==
+	논리 : &&, ||, !
+	삼항 : 조건식?값1:값2
+	</pre>
+	
+	<h2>==, ===</h2>
+	
+	<pre>
+	==(동등연산자) : 값만 비교
+	===(일치연산자) : 값과 타입을 모두 비교
+	</pre>
+	
+	<label>나이 : <input type="text" placeholder="숫자만 입력하시오" id="age"> </label>
+	<button onclick="checkAge()">입력</button>
+	
+	<script type="text/javascript">
+	let num = 0;
+	let str = '0';
+	let blank = '';
+	let arr = [];
+	
+	console.log('0과 \'0\'은 같은 값입니까?' + (num==str));
+	console.log('0과 \'0\'은 같은 값입니까?' + (num===str));
+	console.log('0과 \'\'은 같은 값입니까?' + (num==blank));
+	console.log('0과 []은 같은 값입니까?' + (num==arr));
+	console.log('0과 false은 같은 값입니까?' + (num==false));
+	console.log('0과 null은 같은 값입니까?' + ( num == null ));
+	
+	function checkAge(){
+		/* document : html 문서에 있는 html element를 관리하는 객체 
+			querySelector : css 선택자를 사용해 html element 객체를 반환해준다.*/
+		let age = document.querySelector('#age');
+		console.log(typeof(age.value));
+		
+		console.dir(age);
+		if(age.value <= 20) {
+			/* 브라우저의 경고창을 출력해주는 전역 객체의 메서드 */
+			alert('미성년자는 수업을 들울 수 없습니다.');
+		}else{
+			alert('환영합니다');
+		}
+	}
+	</script>
+	
+	<h2>자바스크립트에서의 값 -> boolean 값</h2> 
+	<pre>
+	0                       => false
+	                        => false
+	undefined               => false  
+	null                    => false
+	NaN(not a number)       => false
+	나머지 값은 모두 true로 반환                     
+	</pre>
+	<script type="text/javascript">
+	console.log('===============================');
+	if( !(true&&0) ){
+		console.log('0의 boolean 값은 false 입니다.');
+	}
+	if( !(true&&'') ){
+		console.log('\'\'의 boolean 값은 false 입니다.');
+	}
+	if( !(true&&undefined) ){
+		console.log('undefined의 boolean 값은 false 입니다.');
+	}
+	if( !(true&&null) ){
+		console.log('null의 boolean 값은 false 입니다.');
+	}
+	if( !(true&&NaN) ){
+		console.log('NaN의 boolean 값은 false 입니다.');
+	}
+	if(document.querySelector('#age')) {/* 이 값이 트루이므로 */
+		console.log('아이디가 age인 html element가 존재합니다.');
+	}else {
+		console.log('아이디가 age인 html element가 존재하지 않습니다.');
+	}
+	</script>
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 </body>
 </html>
