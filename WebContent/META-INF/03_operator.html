@@ -32,7 +32,7 @@
 	let blank = '';
 	let arr = [];
 	
-	console.log('0과 \'0\'은 같은 값입니까?' + (num==str));
+	console.log('0과 \'0\'은 같은 값입니까?' + (num==str)); // 같다면 true
 	console.log('0과 \'0\'은 같은 값입니까?' + (num===str));
 	console.log('0과 \'\'은 같은 값입니까?' + (num==blank));
 	console.log('0과 []은 같은 값입니까?' + (num==arr));
@@ -55,13 +55,14 @@
 	}
 	</script>
 	
-	<h2>자바스크립트에서의 값 -> boolean 값</h2> 
+	<h2>자바스크립트에서의 값 -> boolean 값(유용한 기능이므로 숙지 필수)</h2> 
 	<pre>
 	0                       => false
 	                        => false
 	undefined               => false  
 	null                    => false
 	NaN(not a number)       => false
+	
 	나머지 값은 모두 true로 반환                     
 	</pre>
 	<script type="text/javascript">
